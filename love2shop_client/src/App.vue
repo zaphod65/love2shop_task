@@ -1,19 +1,20 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import Orders from './components/Orders.vue'
 </script>
 
 <template>
   <header>
+    <!-- TODO: Swap out for something better -->
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+        Welcome, you have some orders:
     </div>
   </header>
 
   <main>
-    <TheWelcome />
+    <h2>Orders</h2>
+    <Orders />
   </main>
 </template>
 
