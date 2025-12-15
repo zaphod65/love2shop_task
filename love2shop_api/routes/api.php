@@ -1,11 +1,8 @@
 <?php
 
+use App\Http\Controllers\OrderController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-Route::get('', function (Request $request) {
-    return ['test'];
-});
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:sanctum');
+// API is not authenticated for now, would 100% need implementation in a production system
+Route::resource('orders', OrderController::class);

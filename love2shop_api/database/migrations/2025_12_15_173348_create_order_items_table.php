@@ -15,10 +15,11 @@ return new class extends Migration
         // Table intended as a join table between orders and a hypothetical items table that
         // is not implemented here
         Schema::create(self::TABLE, function (Blueprint $table) {
+            // ID might not be needed for items, but this could be useful in an ordering system
+            // so we'll keep it here
             $table->id();
             $table->integer('order_id')->unsigned();
             $table->integer('item_id');
-            $table->timestamps();
 
             $table->foreign('order_id')->references('id')->on('orders')->onDelete('cascade');
         });
